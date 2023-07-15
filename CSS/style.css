@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: auto;
+  padding: 110px 240px;
+  font-family: "PT" serif;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.header-container {
+  display: flex;
+  gap: 50px;  
+}
+.title {
+  color: #000;
+  font-family: PT Serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 50%;
+  
+}
+.header-info {
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 25px;
+}
+.info-title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.info-description {
+  width: 439px;
+  height: 87px;
+}
+#owner {
+  grid-area: owner;
+  /* margin-top: -50px; */
+}
+#director {
+  grid-area: director;
+}
+#tech-lead {
+  grid-area: lead;
+}
+#ux-designer {
+  grid-area: designer;
+}
+#developer1 {
+  grid-area: dev1;
+}
+#developer2 {
+  grid-area: dev2;
+}
+.team {
+  margin-top: 200px;
+  display: grid;
+  gap: 70px;
+  grid-template-areas:
+    "owner owner . . lead lead"
+    "owner owner director director lead lead"
+    "owner owner director director lead lead"
+    "owner owner director director lead lead"
+    ". . director director . ."
+    "designer designer . .  dev2 dev2"
+    "designer designer dev1 dev1 dev2 dev2"
+    "designer designer dev1 dev1 dev2 dev2"
+    "designer designer dev1 dev1 dev2 dev2"
+    ". . dev1 dev1 . .";
+}
+.image {
+  grid-area: image;
+  /* width: 240px; */
+}
+.post {
+  writing-mode: vertical-rl;
+  color: #000;
+  font-size: 12grbnr42dpx;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  grid-area: post;
+  /* width: 50px; */
+}
+.name {
+  grid-area: name;
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.grid {
+  /* width: 310px; */
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  grid-template-areas:
+    "image image image post"
+    "image image image post"
+    "image image image ."
+    "name name name name";
+}
