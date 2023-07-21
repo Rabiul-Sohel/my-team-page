@@ -123,10 +123,11 @@ footer p{
 @media screen and (max-width:576px){
 .header-container {
   flex-direction: column;
+  gap: 10px;
 }
 .title, .header-info{
   width: 100%;
-  margin: 30px auto;
+  margin: 10px auto;
 }
 body {
   padding: 10px;
