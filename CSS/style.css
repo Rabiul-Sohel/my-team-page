@@ -3,8 +3,7 @@
   padding: 0;
 }
 body {
-  width: auto;
-  padding: 110px 240px;
+  padding: 110px 240px 0;
   font-family: "PT" serif;
 }
 img {
@@ -13,12 +12,13 @@ img {
 }
 .header-container {
   display: flex;
-  gap: 50px;  
+  /* justify-content: space-between; */
+  gap: 100px;  
 }
 .title {
   color: #000;
   font-family: PT Serif;
-  font-size: 36px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -30,7 +30,7 @@ img {
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
-  margin-top: 25px;
+  margin-top: 13px;
 }
 .info-title {
   font-weight: 600;
@@ -60,7 +60,7 @@ img {
   grid-area: dev2;
 }
 .team {
-  margin-top: 200px;
+  margin-top: 100px;
   display: grid;
   gap: 70px;
   grid-template-areas:
@@ -77,12 +77,12 @@ img {
 }
 .image {
   grid-area: image;
-  /* width: 240px; */
+  width: 240px;
 }
 .post {
   writing-mode: vertical-rl;
   color: #000;
-  font-size: 12grbnr42dpx;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -109,4 +109,56 @@ img {
     "image image image post"
     "image image image ."
     "name name name name";
+}
+footer p{
+  color: #A9A9A9;
+  margin: 100px 0 24px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+/* responsive part */
+
+@media screen and (max-width:576px){
+.header-container {
+  flex-direction: column;
+}
+.title, .header-info{
+  width: 100%;
+  margin: 30px auto;
+}
+body {
+  padding: 10px;
+  font-family: "PT" serif;
+}
+.title{
+  font-size: 18px;
+}
+.image{
+  width: 150px;
+}
+.team {
+  margin-top: 50px;
+  justify-content: space-between;
+  grid-template-areas:
+    "owner owner . . "
+    "owner owner director director"
+    "owner owner director director"
+    "owner owner director director"
+    ". . director director"
+    "lead lead . ."
+    "lead lead designer designer"
+    "lead lead  designer designer"
+    "lead lead  designer designer"
+    ".  .  designer designer "
+    "dev1 dev1 . ."
+    "dev1 dev1 dev2 dev2"
+    "dev1 dev1 dev2 dev2"
+    "dev1 dev1 dev2 dev2"
+    ". . dev2 dev2";
+}
+.post {
+  font-size: 12px;
+}
 }
